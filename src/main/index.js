@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-
 import Header from '../common/header';
 import Banner from '../common/banner';
 import axios from 'axios';

@@ -9,7 +9,7 @@ class Banner extends Component {
                 infinite
             >
                 {
-                    data && data.map((item) =>(<div><img src={item.img} /></div>))
+                    data && data.map((item) =>(<div> <img src={item.img} alt=''/></div>))
                 }
             </Carousel>
         )

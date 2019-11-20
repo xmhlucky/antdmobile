@@ -1,29 +1,24 @@
-import React, { Component } from 'react';
-import { Menu, SearchBar, NavBar } from 'antd-mobile';
-import { Router, Route, Link } from 'react-router';
+import React, { Component, Fragment } from 'react';
+import { NavBar } from 'antd-mobile';
+import { Link } from 'react-router-dom';
 class Header extends Component {
     constructor (props) {
         super(props);
         this.state = {
             
         }
-        this.toLogon = this.toLogon.bind(this);
-    }
-    toLogon () {
-
     }
     render () {
         return (
-            <div>
-                {/* <Menu />                 */}
+            <Fragment>
                 <NavBar 
                     leftContent='首页'
-                    rightContent={<span onClick={this.toLogon}>登录</span>}
+                    rightContent={<Link to='/login'>登录</Link>}
                     mode='dark'
                 >
                     快乐读书网
                 </NavBar>
-            </div>
+            </Fragment>
         )
     }
 

@@ -1,12 +1,16 @@
 import React, {Component} from 'react';
-import { Router, Route, Link } from 'react-router';
+import { Route, BrowserRouter } from 'react-router-dom';
 import AppIndex from './main';
-import Login from './login/login';
+import LoginForm from './login/login';
 class MobileRouter extends Component {
     render () {
+        console.log(LoginForm)
         return (
             <div>
-                <Router path="" component={AppIndex} />
+                <BrowserRouter>
+                    <Route exact path="/" component={AppIndex} />
+                    <Route path="/login" component={LoginForm} />
+                </BrowserRouter>
             </div>
             
         )
